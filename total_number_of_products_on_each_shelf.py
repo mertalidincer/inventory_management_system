@@ -50,8 +50,8 @@ def auto_detect_shelves_and_count_dynamic(results):
     # Determine thresholds based on average box dimensions
     avg_box_height = np.mean([box[3] - box[1] for box in boxes])
     avg_box_width = np.mean([box[0] - box[2] for box in boxes])
-    y_threshold = avg_box_height * 0.5
-    x_threshold = avg_box_width * 0.2
+    y_threshold = avg_box_height * 0.7
+    x_threshold = avg_box_width * 0.9
 
     # Sort boxes by their vertical center (y-axis)
     boxes = sorted(boxes, key=lambda b: (b[1] + b[3]) / 2)
